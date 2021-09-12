@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/***Header***/
+
+nav ul {
+  list-style-type: none;
+  display: none;
+}
+
+nav ul a {
+  display: block;
+  background-color: rgb(53, 53, 230);
+  padding: 20px;
+  font-size: 17px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  transition: color 1s ease, background 1s ease, padding 1s ease;
+}
+nav ul a:hover {
+  background-color: blue;
+  color: rgb(238, 98, 4);
+  padding-left: 30px;
+}
+.nav-container img {
+  height: 75px;
+  align-self: center;
+}
+
+.nav-container {
+  padding: 0 20px;
+  background-color: rgb(53, 53, 230);
+  border-bottom: 3px solid white;
+  display: flex;
+  justify-content: space-between;
+}
+.fa-bars {
+  color: white;
+}
+.bar {
+  width: 30px;
+  height: 3px;
+  margin: 7px;
+  background: white;
+}
+.btn {
+  padding: 2px;
+  display: inline-block;
+  border: 2px solid white;
+  align-self: center;
+}
+
+header {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url(pics/header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  flex: 0 0 auto;
+}
+
+.banner img {
+  height: 150px;
+}
+
+.banner {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  color: rgb(238, 98, 4);
+}
+
+.banner h3 {
+  text-transform: capitalize;
+  font-size: 30px;
+  color: #0d1317;
+}
+.and {
+  color: rgb(53, 53, 230);
+}
+.banner-icons {
+  padding: 20px;
+}
+.banner-icons a {
+  display: inline-block;
+  font-size: 30px;
+  background-color: rgb(53, 53, 230);
+  padding: 5px 10px;
+  margin: 0 10px;
+  border-radius: 50%;
+  color: white;
+  transition: color 1s ease, transform 1s ease;
+}
+.banner-icons a:hover {
+  color: rgb(121, 121, 121);
+  transform: translateY(-10px);
+}
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+@media screen and (min-width: 776px) {
+  nav ul {
+    display: flex !important;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgb(53, 53, 230);
+  }
+  nav ul a {
+    background: transparent;
+  }
+  nav ul a:hover {
+    background: transparent;
+    padding-left: 20px;
+  }
+  .nav-container {
+    display: none;
+  }
+}
+
+/***Travel***/
+
+.travel-section {
+  min-height: 100vh;
+  background: url(pics/travel.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+.travel-styles {
+  color: #f5f3f5;
+  display: flex;
+  margin: 40px;
+}
+
+.travel-icon {
+  align-self: center;
+  font-size: 50px;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 3px solid #f5f3f5;
+  padding: 20px;
+}
+
+.travel-text h3 {
+  text-transform: uppercase;
+}
+
+.travel-text p {
+  line-height: 1.5;
+  margin-top: 5px;
+}
+@media screen and (min-width: 576px) {
+  .travel-center {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 776px) {
+  .travel-center {
+    width: 50%;
+  }
+}
+
+/*** Adventure ***/
+
+.adventure-title {
+  padding: 0 0 100px 0;
+  background: #f5f3f5;
+  
+}
+.title h2 {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(53, 53, 230);
+ 
+}
+.title-underline {
+  width: 100px;
+  height: 4px;
+  background: rgb(238, 98, 4);
+  margin: 10px auto;
+}
+.title {
+  padding:80px 0;
+  
+}
+
+.adventure {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  overflow: hidden;
+}
+
+.adventure-section img {
+  width: 100%;
+  display: block;
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.adventure-section img:hover {
+  opacity: 0.3;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  .adventure-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .adventure-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*** About ***/
+
+.about {
+  min-height: 100vh;
+  padding: 100px 0;
+  background: url(pics/about.jpg) center/cover fixed no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.about-card h3 {
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+.about-card .fa-ship {
+  font-size: 60px;
+  color: rgb(53, 53, 230);
+  margin: 20px 0;
+}
+
+.about-card p {
+  line-height: 1.8;
+}
+
+@media screen and (min-width: 776px) {
+  .about-card {
+    max-width: 50%;
+    margin: 0 auto;
+    border-radius: 30px;
+  }
+  .about-card p {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
+
+/*** Filer ***/
+
+.filler {
+  min-height: 60vh;
+  background: url(pics/filler.jpg) center/cover fixed no-repeat;
+}
+
+/*** Contact ***/
+
+.contact {
+  min-height: 80vh;
+  background: url(pics/contact.jpg) center/cover fixed no-repeat;
+  /*  3last*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-card {
+  /*  4*/
+  flex: 0 0 80%;
+  padding: 40px 0;
+  background: rgba(53, 53, 230, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  flex: 0 0 60%;
+}
+
+form input {
+  margin: 10px 0;
+}
+
+form h3 {
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb#0d1317;
+}
+
+form input,
+form textarea {
+  padding: 5px;
+  border: 3px solid rgb(238, 98, 4);
+}
+
+input::placeholder,
+textarea::placeholder {
+  text-transform: uppercase;
+  color: rgb(53, 53, 230);
+  font-weight: 500;
+}
+
+.form-btn {
+  margin: 20px;
+  font-size: 20px;
+  border-radius: 40px;
+  padding: 5px;
+  background: rgb(238, 98, 4);
+  color: #f5f3f5;
+  transition: color 1s ease-in-out, background 1s ease-in-out;
+}
+
+.form-btn:hover {
+  color: rgb(53, 53, 230);
+  background: #f5f3f5;
+}
+
+/*** Footer ***/
+
+footer {
+  background: rgb(238, 98, 4);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.footer-icons a {
+  display: inline-block;
+  font-size: 30px;
+  margin: 0px 10px 20px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: rgb(53, 53, 230);
+  color: white;
+}
+
+footer p {
+  color: #f5f3f5;
+  font-size: 20px;
+}
